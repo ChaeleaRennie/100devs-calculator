@@ -1,0 +1,77 @@
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+/* Getting rid of default padding etc. From MayanWolfe's */
+
+/* Applying this everywhere */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    /* For each nested item, consider its parent to be 100% width/100% height */
+    box-sizing:inherit;  
+}
+
+.calculator {
+    /* Needs a fixed width and to be centered */
+    position: absolute;
+    /* ^- takes it out of the normal flow of the page */
+    top: 20%;
+    left: 40%;
+    translate: translate(-50%, -50%);
+    width: 400px;
+    background-color: black;
+    /* border: 2px solid red; */
+    border-radius: 30px;
+    padding: 40px;
+    padding-top: 85px;
+
+}
+
+.calcScreen {
+    width: 100%;
+    /* Going to control this using padding on the parent */
+    font-size: 5rem;
+    height: 80px;
+    border: none;
+    background-color: white;
+    color: black;
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 10px;
+    /* border: 2px solid green; */
+}
+
+.calcButtons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 15px;
+    padding-bottom: 5px;
+    /* border: 2px solid yellow; */
+
+}
+
+button {
+    height: 60px;
+    background: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 4rem;
+    font-weight: bold;
+    color: black;
+    margin: 7px;
+    padding: 5px;
+    flex: 1 0 18%;
+}
+
+.allClear {
+    background-color: red;
+    color: white;
+    font-size: 3rem;
+}
+
+button:hover {
+    background-color: pink;
+}
